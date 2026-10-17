@@ -60,3 +60,7 @@ Test paint and cabinet samples under the actual room lighting before implementat
 Five concepts (`assets/*-ind.jpg`) add cognac upholstery, black steel, walnut/oak, graphite and light concrete-look finishes. The main living room replaces the timber-slat divider with a sparse open steel frame holding the TV above a separate low walnut console. Open sightlines and passage are retained. The frame requires professional design and anchoring; imagery is not an engineering specification.
 
 The gallery opens in Contemporary Industrial, with all earlier options retained. No changes to structural columns/beams, openings, fixed cabinet footprints or services are proposed.
+
+## Original exterior render
+
+The top section displays `assets/house-exterior-original.jpg`, a byte-for-byte copy of the supplied exterior image. The whole image is displayed without cropping, and its full-size version is linked. Interior style changes do not replace this exterior image.

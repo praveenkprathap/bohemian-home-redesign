@@ -1,6 +1,6 @@
-# A home, soulful — Bohemian home redesign
+# A home, soulful — Bohemian + Neo-Ethnic home redesign
 
-A static, responsive HTML gallery for five supplied interiors: living, dining, kitchen, bedroom and upper living area. Each room has original/concept controls, a full-size image link, design notes and implementation considerations.
+A static, responsive HTML gallery for five supplied interiors: living, dining, kitchen, bedroom and upper living area. Each room has Original/Bohemian/Neo-Ethnic controls and a global style switch, a full-size image link, design notes and implementation considerations.
 
 ## View locally
 
@@ -22,8 +22,11 @@ Keep original openings and circulation. Confirm measurements, fan clearances, ca
 
 - `index.html`: page structure
 - `styles.css`: responsive and print styles
-- `app.js`: room content and original/concept controls
+- `app.js`: room content and Original/Bohemian/Neo-Ethnic controls and a global style switch
 - `assets/*-before.jpg`: supplied room images
 - `assets/*-after.jpg`: generated Bohemian concept images
+- `assets/*-neo.jpg`: generated Neo-Ethnic concept images
 
 This project includes personal source imagery supplied for this redesign. No general license to reuse those images is granted.
+
+Neo-Ethnic follows the second supplied moodboard: Indian modern geometry, dark teak/walnut, brass, botanical art and restrained heritage motifs. The original photographs remain the starting point for both styles.

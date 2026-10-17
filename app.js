@@ -5,20 +5,36 @@ const rooms = [
  {id:'bedroom',name:'Bedroom',theme:'A restful retreat with a warmer soul.',changes:'An earthy terracotta headboard wall, cane texture, ivory linen and a rust quilt create a softer retreat. Block-print cushions and a vintage rug carry the reference’s layered character into the bedroom.',keep:'Retain the bed position, window seat, large rear window, desk and full-height wardrobe. Preserve natural light and the ceiling fan.',items:['Ivory linen, rust quilt and printed cushions','Cane headboard detailing','Woven blinds and warm bedside lamps'],note:'Verify that headboard detailing fits between the windows. Keep wardrobe doors, desk access and bed-side routes clear.'},
  {id:'upper',name:'Upper living area',theme:'An easy, sunlit place to unwind.',changes:'Keep the sage loveseat and introduce ochre and rust textiles, a patterned kilim, a timber table and a compact woven pouf. Cane console fronts and linen curtains connect this lounge to the rooms below.',keep:'Retain the TV wall, rear door, timber window frames and balcony opening. Keep the balcony route open and furniture below the window sightline.',items:['Ochre throw and patterned cushions','Low round timber table and woven pouf','Vintage-style rug and linen curtains'],note:'Choose a compact pouf that can tuck away. Test rug edges and table placement against the rear-door and balcony paths.'}
 ];
+const neo = [{"theme": "Indian craft, contemporary calm.", "changes": "A crisp timber-framed feature wall, botanical artwork and carved teak console introduce Indian heritage through clean lines. Brass details, rust and olive cushions and one traditional rug create a composed living room.", "items": ["Teak console with carved detailing", "Botanical art and warm brass lamp", "Rust and olive cushions with one traditional rug"]}, {"theme": "A table rooted in tradition.", "changes": "Dark teak and cane chairs, a restrained rust runner and a brass centrepiece create an Indian modern dining setting. Brass wall discs and subtle timber framing add heritage detail around the existing staircase.", "items": ["Dark teak and cane dining chairs", "Brass serving bowl and wall discs", "Rust cotton table runner"]}, {"theme": "Heritage motifs, practical surfaces.", "changes": "Walnut lower cabinetry and ivory upper cabinets frame a terracotta backsplash with small traditional ivory motifs. Brass pulls and selected ceramic vessels add warmth while preserving the working L-shaped layout.", "items": ["Walnut and ivory cabinet samples", "Terracotta tiles with small ivory motifs", "Subtle brass pulls and ceramic vessels"]}, {"theme": "A quiet Indian modern retreat.", "changes": "A teak-and-cane headboard, ivory walls with timber accents and botanical art make the room feel crafted and calm. Rust, olive and ochre accents sit against simple ivory bedding and a muted traditional rug.", "items": ["Teak and cane headboard", "Ivory linen with rust and olive accents", "Botanical art and brass bedside lamps"]}, {"theme": "A lounge with a collected heritage.", "changes": "A carved timber console, botanical art and a brass plate give the upper lounge a Neo-Ethnic identity. The sage loveseat gains rust and ochre cushions, a timber-and-brass table and one restrained traditional rug.", "items": ["Carved dark timber console fronts", "Botanical artwork and brass wall plate", "Rust cushions and a traditional rug"]}];
+const labels={before:'Original',after:'Bohemian',neo:'Neo-Ethnic'};
 const content = document.querySelector('#room-content');
+const updateViews=[];
 rooms.forEach((room,index)=>{
  const article=document.createElement('article'); article.className='room'; article.id=room.id;
- article.innerHTML=`<div class="room-top"><h3><span>0${index+1}</span>${room.name}</h3><div class="toggle" role="group" aria-label="${room.name} view"><button type="button" data-view="before" aria-pressed="false">Original</button><button type="button" data-view="after" aria-pressed="true">Bohemian concept</button></div></div><figure class="room-figure"><a class="image-link" href="assets/${room.id}-after.jpg" target="_blank" rel="noopener" aria-label="Open full-size ${room.name} concept"><img loading="lazy" src="assets/${room.id}-after.jpg" alt="Proposed Bohemian redesign of the ${room.name.toLowerCase()}"></a><figcaption aria-live="polite">BOHEMIAN CONCEPT · AI visualization · Select the image to view full size</figcaption></figure><div class="room-notes"><div><h4>${room.theme.toUpperCase()}</h4><p>${room.changes}</p></div><div><h4>WORK WITH THE ROOM</h4><p>${room.keep}</p></div><div><h4>KEY PIECES</h4><ul>${room.items.map(item=>`<li>${item}</li>`).join('')}</ul></div></div><details><summary>Before you implement</summary><p>${room.note}</p></details>`;
+ article.innerHTML=`<div class="room-top"><h3><span>0${index+1}</span>${room.name}</h3><div class="toggle" role="group" aria-label="${room.name} view">${Object.entries(labels).map(([key,label])=>`<button type="button" data-view="${key}" aria-pressed="${key==='after'}">${label}</button>`).join('')}</div></div><figure class="room-figure"><a class="image-link" target="_blank" rel="noopener"><img loading="lazy"></a><figcaption aria-live="polite"></figcaption></figure><div class="room-notes"><div><h4 class="theme"></h4><p class="changes"></p></div><div><h4>WORK WITH THE ROOM</h4><p>${room.keep}</p></div><div><h4>KEY PIECES</h4><ul class="pieces"></ul></div></div><details><summary>Before you implement</summary><p>${room.note}</p></details>`;
+ const update=view=>{
+  const before=view==='before',data=view==='neo'?neo[index]:room;
+  const src=`assets/${room.id}-${view}.jpg`;
+  article.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
+  const img=article.querySelector('img');img.src=src;img.alt=`${before?'Supplied original':labels[view]+' concept'} of the ${room.name.toLowerCase()}`;
+  const link=article.querySelector('.image-link');link.href=src;link.setAttribute('aria-label',`Open full-size ${room.name} ${labels[view]} image`);
+  article.querySelector('figcaption').textContent=`${labels[view].toUpperCase()} · ${before?'Supplied room image':'AI visualization'} · Select the image to view full size`;
+  article.querySelector('.theme').textContent=before?'THE STARTING POINT':data.theme.toUpperCase();
+  article.querySelector('.changes').textContent=before?'Your supplied room image. Select Bohemian or Neo-Ethnic to explore two proposed directions for this same space.':data.changes;
+  article.querySelector('.pieces').innerHTML=before?'<li>Choose a design style to see its proposed pieces.</li>':data.items.map(item=>`<li>${item}</li>`).join('');
+ };
  article.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{
-  const before=button.dataset.view==='before';
-  article.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-  const src=`assets/${room.id}-${before?'before':'after'}.jpg`;
-  article.querySelector('.room-figure img').src=src;
-  article.querySelector('.room-figure img').alt=`${before?'Supplied original image':'Proposed Bohemian redesign'} of the ${room.name.toLowerCase()}`;
-  article.querySelector('.image-link').href=src;
-  article.querySelector('.image-link').setAttribute('aria-label',`Open full-size ${room.name} ${before?'original':'concept'}`);
-  article.querySelector('figcaption').textContent=before?'ORIGINAL · Supplied room image · Select the image to view full size':'BOHEMIAN CONCEPT · AI visualization · Select the image to view full size';
+  update(button.dataset.view);
+  document.querySelectorAll('[data-all]').forEach(b=>b.setAttribute('aria-pressed','false'));
  }));
- content.append(article);
+ update('after');updateViews.push(update);content.append(article);
 });
+document.querySelectorAll('[data-all]').forEach(button=>button.addEventListener('click',()=>{
+ updateViews.forEach(update=>update(button.dataset.all));
+ document.querySelectorAll('[data-all]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+ const view=button.dataset.all;
+ document.querySelector('.hero-image img').src=`assets/living-${view}.jpg`;
+ document.querySelector('.hero-image img').alt=`Living room: ${labels[view]} view`;
+ document.querySelector('.hero-image figcaption').textContent=`THE LIVING ROOM / ${labels[view].toUpperCase()}`;
+}));
 document.querySelector('#print').addEventListener('click',()=>window.print());

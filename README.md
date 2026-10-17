@@ -30,3 +30,9 @@ Keep original openings and circulation. Confirm measurements, fan clearances, ca
 This project includes personal source imagery supplied for this redesign. No general license to reuse those images is granted.
 
 Neo-Ethnic follows the second supplied moodboard: Indian modern geometry, dark teak/walnut, brass, botanical art and restrained heritage motifs. The original photographs remain the starting point for both styles.
+
+## Tropical Modern — alternative furniture layouts
+
+A third design direction adds five new concept images (`assets/*-tropical.jpg`) using teak, cream linen, muted green and simple stone accents. The living room uses a rear-wall sofa and separate chair; dining uses a round table; the kitchen has a compact round breakfast arrangement; the bedroom tests a rotated freestanding bed; the upper lounge uses two chairs. The gallery opens in Tropical Modern and retains both earlier styles and original photographs.
+
+These are photographic layout studies, not measured fit checks. Architectural openings, stairs, fixed cabinetry and services are intended to remain in place. Verify actual clearances before implementing, especially the rotated bed and chair pull-out areas.

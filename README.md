@@ -36,3 +36,9 @@ Neo-Ethnic follows the second supplied moodboard: Indian modern geometry, dark t
 A third design direction adds five new concept images (`assets/*-tropical.jpg`) using teak, cream linen, muted green and simple stone accents. The living room uses a rear-wall sofa and separate chair; dining uses a round table; the kitchen has a compact round breakfast arrangement; the bedroom tests a rotated freestanding bed; the upper lounge uses two chairs. The gallery opens in Tropical Modern and retains both earlier styles and original photographs.
 
 These are photographic layout studies, not measured fit checks. Architectural openings, stairs, fixed cabinetry and services are intended to remain in place. Verify actual clearances before implementing, especially the rotated bed and chair pull-out areas.
+
+## Soft Art Deco — clarified living-room partition
+
+Five additional concepts (`assets/*-deco.jpg`) use ivory, walnut, muted teal, brass and curved furniture. This is the default gallery view. The main living room now interprets the TV feature as a slim open divider, with sightlines and passage into the adjoining space; it is not treated as a full enclosing structural wall. Existing columns, beams, other walls and all openings remain part of the retained shell. Earlier living-room visuals are marked as predating this clarification.
+
+The exact partition design is conceptual and must be measured on site. Check TV mounting, divider stability and wiring with the installer. No structural demolition is proposed.

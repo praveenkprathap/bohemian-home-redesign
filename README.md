@@ -42,3 +42,9 @@ These are photographic layout studies, not measured fit checks. Architectural op
 Five additional concepts (`assets/*-deco.jpg`) use ivory, walnut, muted teal, brass and curved furniture. This is the default gallery view. The main living room now interprets the TV feature as a slim open divider, with sightlines and passage into the adjoining space; it is not treated as a full enclosing structural wall. Existing columns, beams, other walls and all openings remain part of the retained shell. Earlier living-room visuals are marked as predating this clarification.
 
 The exact partition design is conceptual and must be measured on site. Check TV mounting, divider stability and wiring with the installer. No structural demolition is proposed.
+
+## Modern Mediterranean — Pinterest-informed direction
+
+Five new images (`assets/*-med.jpg`) add pale oak, ivory linen, stone, clay accents and woven rush furniture. This is the latest default view. The main living room retains a narrow TV panel and open slatted divider with views and passage into the adjoining space; fixed columns, beams and openings are retained.
+
+Broad visual research: [Pinterest Mediterranean interiors collection](https://www.pinterest.com/ideas/mediterranean-style-living-room-ideas/922481117502/). Pinterest images are not copied into the project; all new concepts are generated edits of the supplied house imagery. Mediterranean character comes from furniture and finishes, with no new arches, openings or structural changes proposed.

@@ -48,3 +48,9 @@ The exact partition design is conceptual and must be measured on site. Check TV 
 Five new images (`assets/*-med.jpg`) add pale oak, ivory linen, stone, clay accents and woven rush furniture. This is the latest default view. The main living room retains a narrow TV panel and open slatted divider with views and passage into the adjoining space; fixed columns, beams and openings are retained.
 
 Broad visual research: [Pinterest Mediterranean interiors collection](https://www.pinterest.com/ideas/mediterranean-style-living-room-ideas/922481117502/). Pinterest images are not copied into the project; all new concepts are generated edits of the supplied house imagery. Mediterranean character comes from furniture and finishes, with no new arches, openings or structural changes proposed.
+
+## Sky Blue Coastal — sky blue, ivory and pale oak
+
+Five new concepts (`assets/*-sky.jpg`) add sky blue to major furniture or wall/cabinet surfaces, balanced by ivory linen, pale oak, cream stone and restrained navy details. The gallery opens in this sixth style. The main living room keeps its open TV divider, existing column/beam and open sightlines. All earlier styles and the originals remain available.
+
+Test paint and cabinet samples under the actual room lighting before implementation. All furniture and divider clearances remain subject to site measurement.

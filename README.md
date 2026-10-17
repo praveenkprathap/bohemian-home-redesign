@@ -54,3 +54,9 @@ Broad visual research: [Pinterest Mediterranean interiors collection](https://ww
 Five new concepts (`assets/*-sky.jpg`) add sky blue to major furniture or wall/cabinet surfaces, balanced by ivory linen, pale oak, cream stone and restrained navy details. The gallery opens in this sixth style. The main living room keeps its open TV divider, existing column/beam and open sightlines. All earlier styles and the originals remain available.
 
 Test paint and cabinet samples under the actual room lighting before implementation. All furniture and divider clearances remain subject to site measurement.
+
+## Contemporary Industrial — a new TV-divider design
+
+Five concepts (`assets/*-ind.jpg`) add cognac upholstery, black steel, walnut/oak, graphite and light concrete-look finishes. The main living room replaces the timber-slat divider with a sparse open steel frame holding the TV above a separate low walnut console. Open sightlines and passage are retained. The frame requires professional design and anchoring; imagery is not an engineering specification.
+
+The gallery opens in Contemporary Industrial, with all earlier options retained. No changes to structural columns/beams, openings, fixed cabinet footprints or services are proposed.
